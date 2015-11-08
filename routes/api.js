@@ -1,62 +1,20 @@
 var express = require('express');
 var router = express.Router();
-var Message = require('../models/message');
+var messageController = require('../controllers/message');
+
 /**
  * API routers.
  */
-router.get('/', function(req, res, next) {
-  res.json({
-    message: "Welcome to NodeChat v1"
-  });
-});
 // MESSAGE
 // Get All
-router.get('/message', function(req, res, next) {
-  Message.find({}, function(err, messages) {
-    res.json(messages);
-  });
-});
-
+router.get('/message', messageController.getAll);
 // Get By Id
-router.get('/message/:id', function(req, res, next) {
-  Message.findOne({
-    _id: req.params.id
-  }, function(err, messages) {
-    res.json(messages);
-  })
-});
-
+router.get('/message/:id', messageController.getById);
 // Message insert
-router.post('/message', function(req, res, next) {
-  var timeNow = new Date();
-  var message = new Message({
-    content: req.body.content,
-    date: timeNow,
-    user: req.body.user
-  });
-  message.save(function(err) {
-    if (err) throw err;
-    res.json({
-      message: "New message added"
-    });
-  });
-});
-
+router.post('/message', messageController.post);
 // Message update
-router.put('/message/:id', function(req, res, next) {
-  res.send('Update message');
-});
-
+router.put('/message/:id', messageController.update);
 // Message delete
-router.delete('/message/:id', function(req, res, next) {
-  Message.remove({
-    _id: req.params.id
-  }, function(err) {
-    if (err) throw err;
-    res.json({
-      message: "Message deleted"
-    });
-  });
-});
+router.delete('/message/:id', messageController.delete);
 
 module.exports = router;

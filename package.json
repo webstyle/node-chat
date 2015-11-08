@@ -1,6 +1,6 @@
 {
-  "name": "nodechat",
-  "version": "1.0.1",
+  "name": "NodeChat",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "mongoose": "^4.2.4",
     "morgan": "~1.6.1",
+    "passport": "^0.3.0",
     "serve-favicon": "~2.3.0"
   }
 }
