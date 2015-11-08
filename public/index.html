@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="NodeChat">
+
 <head>
   <meta charset="utf-8">
   <title>NodeChat</title>
@@ -8,7 +9,16 @@
 </head>
 
 <body>
-  <h1>NodeChat v1.0.0</h1>
+  <div>
+    <div style="float:left;">
+      <img src="images/logo.png" alt="NodeChat" height="100" />
+    </div>
+    <div style="float:right">
+      <h1>NodeChat</h1>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <hr />
   <div ng-controller="MsgCtrl">
     <div ng-repeat="message in messages">
       <strong>
