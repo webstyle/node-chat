@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="NodeChat">
+<head>
+  <meta charset="utf-8">
+  <title>NodeChat</title>
+  <script src="javascripts/angular.min.js" charset="utf-8"></script>
+  <script src="javascripts/app.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <h1>NodeChat v1.0.0</h1>
+  <div ng-controller="MsgCtrl">
+    <div ng-repeat="message in messages">
+      <strong>
+        <span ng-bind="message.user"></span>
+      </strong>
+      <p>
+        <span ng-bind="message.content"></span>
+      </p>
+      <p>
+        <small><a href="#" ng-click="deleteMessage(message._id)">Delete</a></small>
+      </p>
+      <hr />
+    </div>
+    <input type="text" name="Message" ng-model="content">
+    <input type="submit" ng-click="save()" value="Send" />
+  </div>
+</body>
+
+</html>
