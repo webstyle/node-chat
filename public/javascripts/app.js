@@ -1,5 +1,5 @@
 var NodeChat = angular.module('NodeChat', []);
-var appUrl = 'http://localhost:3000/api/v1';
+var appUrl = 'http://localhost:8080/api/v1';
 
 /**
  * Message Controller.
