@@ -8,4 +8,4 @@ Install dependices
 ```sudo npm install```
 Run application
 ```node ./bin/www```
-Open browser and go to *http://localhost:3000*
+Open browser and go to *http://localhost:8080*
