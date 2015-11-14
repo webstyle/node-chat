@@ -4,20 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>NodeChat</title>
-  <script src="javascripts/angular.min.js" charset="utf-8"></script>
-  <script src="javascripts/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
-  <div>
-    <div style="float:left;">
-      <img src="images/logo.png" alt="NodeChat" height="100" />
-    </div>
-    <div style="float:right">
-      <h1>NodeChat</h1>
-    </div>
-    <div style="clear:both;"></div>
-  </div>
+  <div id="top"></div>
+  <header>
+
+  </header>
   <p>
     <ul>
       <li>
@@ -29,7 +23,7 @@
     </ul>
   </p>
   <hr />
-  <div ng-controller="MsgCtrl">
+  <div ng-controller="MsgCtrl" class="messages">
     <div ng-repeat="message in messages">
       <strong>
         <span ng-bind="message.user"></span>
@@ -42,9 +36,15 @@
       </p>
       <hr />
     </div>
-    <input type="text" name="Message" ng-model="content">
-    <input type="submit" ng-click="save()" value="Send" />
+    <form class="sendForm">
+      <input class="sendFormInput" type="text" name="Message" ng-model="content">
+      <input class="sendFormButton" type="submit" ng-click="save()" value="Send" />
+    </form>
   </div>
+  <div id="bottom">
+  </div>
+  <script src="javascripts/angular.min.js" charset="utf-8"></script>
+  <script src="javascripts/app.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -1,8 +1,37 @@
 body {
-  padding: 50px;
+  margin: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border: 1px solid #dadada;
+  margin-bottom: 150px;
 }
-
 a {
   color: #00B7FF;
+}
+header {
+  background-color: #dadada;
+  padding: 10px;
+  color: #999;
+}
+.sendForm {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+  width: 100%;
+  background-color: #dadada;
+  z-index: 1000;
+}
+.sendFormInput {
+  width: 90%;
+  padding: 10px;
+}
+
+.sendFormButton {
+  padding: 10px;
+  background-color: #3498db;
+  color:#fff;
+}
+
+.messages {
+  padding: 10px;
 }
